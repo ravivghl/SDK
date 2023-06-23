@@ -1,0 +1,61 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.myapplication'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.myapplication"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+
+        // TODO: change these to the values you've been supplied
+        // Encrypted Master Lock SDK License file goes here
+        buildConfigField("String", "MLSDKLICENSE", "\"" +
+                "n1/cqDFRxK+qcDjYj1RgKezL4rivnRrP9IVPm2BbPyyGUNsMTplXwnx2coIjwjPHE/vsIBN2hImuLQH5dNLYgAU3KWDDWZ+75tyY8KT0YvEp1rej2Bmo1Bmv1p5uSSHootKcy7ndX8NFRH4f4H8ozwzPCk0vHsF+XO1LsfAjRR30kkE28f9a0Uqovdua0WUL1a2UXwLXqeraRN9toBSr3vXDRW4WbpxmJ5maH9AB4oBLOB2nQPsvY8fuffz2N4Fbfp7j+0vhfFdq5v8DpBDOr6HVnOL4v8/gNV1kBBDRUirbxPsXdsMeoc+QVfLFzCZy2/zd9gab+CQKymatKEOyKQ==|wQnPyl+gDNtLUOZIWECfi4KvHCL7LSsk4/Ms7Mfw6o+7OD9ix0zorEbmkUxxFG/GUae1pI1PXyD+Jb6AbvyFMPr2VaWrW9IPZVGd8TSLtZRNbqgJgrMPEToXEPzp8R8eeyTK7jsndTWj5PxaToF17nzp9mLLev3sjWT1WHwkMT1JWn75fdxWUqO4yctAaKer8XFRVrIoAqUaiSf2jzVnrk6HKMK0ffCci9VA9xTnqq90Ga0BqF5RiVKkcgRaq1wcZNmQHqhP5GrOMhTWgtWVKihG4DmYn79ksiMW2ZmLiyOJH0egYA62LLIXYcB+BJWwlami9pPdsGXRKM8p+76HtQ==|QFEhOCEFRb4yvu7emoMspLdKQ25Wlqz8YYMFbSYpfPdH6hu1a7tXN9lYT/sfByt5KMy6ySbU67Nwvp9PCh+cbPU+w3F7BFgyiRC2zbXs/6NZkzZjKeYSmj1/kyxH77I4yI0QJiloZZmTK1pMfmzNSRC1hjtkuBLtAB8dG7GxyVq7514yq/o0MrOgPfjgyb9iCUeGSGVx6DjZYjXwQMvxTw5VzieRsXK5tRMEg5o6kJXteZ+g/YJmjH/z1YcQMdBgh2inxn5cOOpMpLT9PhHGF0Dal+LeijiS0lCs9BjKd2RK+UburEgV1lLaSFCcnWretZnClBXRRFF27lfaCH8zRA==" +
+                "\"")
+
+        // Master Lock CPAPI keys go here for Demo App only
+        buildConfigField("String", "CPAPIURL", "\"https://cp.masterlockvault.com\"")
+        buildConfigField("String", "CPAPILICENSE", "\"Vvyr9RWz10VDnVp75KeM3JfanWUG9+QC\"")
+        buildConfigField("String", "CPAPIPASSWORD", "\"c+CTBwvOjnvEbmeMijs9BIcdUl52tr1Y\"")
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        buildConfig = true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation project(path: ':geokeySDKLibrary')
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

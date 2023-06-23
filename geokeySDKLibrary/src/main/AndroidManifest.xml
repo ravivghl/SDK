@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<application>
+
+    <meta-data
+        android:name="noke-core-api-mobile-key"
+        android:value="eyJhbGciOiJOT0tFX01PQklMRV9TQU5EQk9YIiwidHlwIjoiSldUIn0.eyJhbGciOiJOT0tFX01PQklMRV9TQU5EQk9YIiwiY29tcGFueV91dWlkIjoiN2ViNjg3YTktNjhiMy00OTNhLTg3ODEtYzNlM2ZlZGQ3YjhmIiwiaXNzIjoibm9rZS5jb20ifQ.f1a77938df99c3e4de12b615c01653b9344e6735" />
+
+    <service
+        android:name=".noke.NokeDeviceManagerService"
+        android:enabled="true" />
+    <service
+        android:name="com.masterlock.mlbluetoothsdk.bluetoothscanner.Scanner"
+        android:enabled="true" />
+
+</application>
+</manifest>

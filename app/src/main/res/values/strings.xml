@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GeokeySDK</string>
+    <string name="location_permission_required">Location Permission Required</string>
+    <string name="this_app_needs_your_permission">this app needs your permission</string>
+    <string name="connected_products_api_error">Connected Products API Error</string>
+    <string name="ok">OK</string>
+</resources>

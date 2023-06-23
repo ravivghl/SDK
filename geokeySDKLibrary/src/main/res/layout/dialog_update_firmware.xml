@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<ViewSwitcher
+    android:id="@+id/switcher"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<LinearLayout
+    android:id="@+id/versionPickerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <TextView
+        android:id="@+id/pickerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/firmware_update"
+        android:layout_gravity="center"
+        android:padding="4dp"
+        android:textSize="16sp"
+        />
+    <TextView
+        android:id="@+id/tvCurrentVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Current Version: 12345678"
+        android:padding="4dp"
+        android:layout_gravity="center"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:paddingBottom="4dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/firmwareVersionDropDown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/select_version"
+            android:inputType="none" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/doUpdateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/do_update" />
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/cancel" />
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/firmwareUpdateLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:textAlignment="center"
+    android:theme="@style/ThemeOverlay.MaterialComponents.Dark">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/firmware_updating"
+        android:textStyle="bold" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="false" />
+
+    <TextView
+        android:id="@+id/progressText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/purple_200"
+        android:textStyle="bold"
+        tools:text="14%" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:padding="16dp"
+            android:text="@string/please_wait"
+            />
+        <TextView
+            android:id="@+id/dummyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:layout_gravity="center"
+            android:padding="16dp"
+            android:text="@string/please_wait"
+            android:visibility="invisible"/>
+    </FrameLayout>
+
+</LinearLayout>
+</ViewSwitcher>
+</RelativeLayout>

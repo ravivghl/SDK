@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/firmware_update"
+        android:title="@string/firmware_update"/>
+    <item android:id="@+id/set_left_handed"
+        android:title="@string/set_left_handed"/>
+    <item android:id="@+id/set_left_handed_false"
+        android:title="@string/set_left_handed_false"/>
+</menu>
