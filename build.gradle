@@ -3,4 +3,23 @@ plugins {
     id 'com.android.application' version '8.0.1' apply false
     id 'com.android.library' version '8.0.1' apply false
     id 'org.jetbrains.kotlin.android' version '1.8.20' apply false
+    //id 'com.jfrog.bintray' version '1.+' apply false
+}
+
+ext {
+    bintrayRepo = 'Test' // your repo name
+    bintrayName = 'TestLib' // has to be same as your library module name
+    publishedGroupId = 'com.geokey' // your module package name
+    libraryName = 'geokeySDK'
+    artifact = 'geokeySDK' // has to be same as your library module name
+    libraryDescription = 'A set of methods used to manipulate time object'
+    siteUrl = 'https://github.com/ravivghl/SDK'
+    gitUrl = 'git@github.com:ravivghl/SDK.git'
+    libraryVersion = '1.0'
+    developerId = 'ravivghl'
+    developerName = 'Ravi Vaghela'
+    developerEmail = 'vghlravi@gmail.com'
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
 }
